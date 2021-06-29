@@ -3,6 +3,23 @@ html, body {
     margin: 0;
     padding: 0;
 }
+.nav-to-hide {
+    transition: width 0.5s;
+    transition-delay: 0.1s;
+}
+.nav-hide{
+    visibility:hidden;
+    display: block;
+    height: 0 !important;
+    width: 0 !important;
+    transition: width 0.5s;
+    /* transition-delay: 2s; */
+}
+
+.nav-bar-collapsed {
+    width: 65px !important;
+    transition: width 0.5s;
+}
 
 .nav-bar ul {
     background-color: #222;
@@ -33,6 +50,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    transition: width 0.5s;
 }
 
 /* not selectable text */
@@ -133,20 +151,24 @@ html, body {
     display: flex;
     position: relative;
     align-items: center;
+    width:100%;
+    padding: 3px 0 3px 5px;
+    /* padding: 0 0 0 10px; */
+}
+.nav-menu-item:hover, .nav-menu-item:active {
+    border-radius: 4px;
+    /* height: 90%; */
+    width:90%; 
+    padding: 3px 0 3px 7px;
+    background-color: rgb(75, 75, 75);
 }
 
-/* .nav-menu-item-div {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: 0 10px 0 0;
-} */
 
 .nav-item-icon {
     background-color: #d4d4d4;
     width: 25px;
     height: 25px;
-    margin: 0 15px 0 0;
+    margin: 0 15px 0 5px;
 }
 
 .nav-dashboard {
@@ -206,13 +228,9 @@ html, body {
 .nav-bar > ul > li a:link, .nav-bar > ul > li  a:visited {
     background-color: #222;
     font-weight: bold;
-    border-radius: 5px;
-    border: none;
     color: #d1d1d1;
-    width: 200px;
+    width: 100%;
     height: 30px;
-    margin: 0 10px 0 0;
-    padding: 5px 0 0 10px;
     text-align: left;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
@@ -222,9 +240,6 @@ html, body {
     display: inline-block;
 }
 
-.nav-bar > ul > li a:hover, .nav-bar > ul > li a:active {
-    background-color: rgb(75, 75, 75);
-}
 
 /* Nav bar account description */
 
@@ -294,7 +309,6 @@ html, body {
     background-size: contain;
     width: 35px;
     height: 35px;
-    margin: 0 0 0 10px;
 }
 
 .nav-collapse-button {
