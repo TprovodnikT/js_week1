@@ -1,29 +1,32 @@
 const navCollapseButton = document.querySelector(".nav-collapse-button")
 const navBar = document.querySelector(".nav-bar")
+const navIcons = document.querySelectorAll(".nav-item-icon")
 const allToHide = document.querySelectorAll(".nav-to-hide")
 let navCollapsed = false;
-navCollapseButton.addEventListener('click', () => {
-    if (navCollapsed) {
-        navBar.classList.add("nav-bar-collapsed")
-    } else {
-        navBar.classList.remove("nav-bar-collapsed")
-    }
-    allToHide.forEach(element => {
-        if (navCollapsed) {
-            element.classList.add("nav-hide")
-        } else {
-            element.classList.remove("nav-hide")
-        }
-                
-    });
-    rotateCollapseButton()
 
+navCollapseButton.addEventListener('click', () => {
+    addRemoveClassCollapse(navBar, "nav-bar-collapsed")
+    hideLabels();
+    addTooltips();
+    addRemoveClassCollapse(navCollapseButton, "rotated-collapse-button")
     navCollapsed = !navCollapsed
+    
 })
-function rotateCollapseButton() {
+function hideLabels() {
+    allToHide.forEach(element => {
+        addRemoveClassCollapse(element, "nav-hide")                
+    });
+}
+function addTooltips() {
+    navIcons.forEach(element => {
+        addRemoveClassCollapse(element, "nav-tooltip")                
+    });
+}
+
+function addRemoveClassCollapse(element, cssClass) {
     if (navCollapsed) {
-        navCollapseButton.classList.add("rotated-collapse-button")
+        element.classList.add(cssClass)
     } else {
-        navCollapseButton.classList.remove("rotated-collapse-button")
+        element.classList.remove(cssClass)
     }
 }
