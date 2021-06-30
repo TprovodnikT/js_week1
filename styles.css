@@ -11,13 +11,8 @@ html, body {
 }
 .nav-to-hide {
     opacity: 1;
-    /* width: fit-content; */
     transition: opacity 0.2s;
     transition-delay: 0.20s;
-    /* transition: width 0.2s;
-    transition-delay: 0.5s; */
-    /* transition: width 0.5s;
-    transition-delay: 0.1s; */
 }
 .nav-hide{
     opacity: 0;
