@@ -23,12 +23,10 @@ html, body {
     width: 0 !important;
     margin:0 !important;
     padding: 0 !important;
-    /* transition: width 0.5s; */
 }
 
 .nav-bar-collapsed {
     width: 65px !important;
-    /* transition: width 0.5s; */
 }
 
 .nav-bar ul {
