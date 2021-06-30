@@ -21,6 +21,7 @@ html, body {
 }
 .nav-hide{
     opacity: 0;
+    font-size: 0 !important;
     visibility:hidden;
     display: block;
     height: 0 !important;
@@ -61,6 +62,7 @@ html, body {
 .nav-bar {
     /* background-color: #222; */
     /* overflow: hidden; */
+    position: fixed;
     width: 235px;
     height: 100%;
     margin: 0;
@@ -340,6 +342,7 @@ html, body {
     background-size: contain;
     width: 35px;
     height: 35px;
+    /* padding: 2px; */
     margin: 0 0 0 10px;
     cursor: pointer;
  
